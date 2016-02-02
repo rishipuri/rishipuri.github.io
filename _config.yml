@@ -12,8 +12,7 @@ sass:
 resume_avatar:                  "true"
 resume_name:                    "Rishipuri"
 resume_title:                   "Developer - Currently immersed in Python"
-resume_contact_email:
-  "rg.rishi@hotmail.com"
+resume_contact_email:           "rishipuri@live.in"
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
