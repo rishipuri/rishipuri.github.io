@@ -1,1 +1,0 @@
-# rishipuri.github.io
