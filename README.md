@@ -1,3 +1,1 @@
-# My personal site
-
-*Currently under construction*
+# This is my personal site
