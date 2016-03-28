@@ -2,13 +2,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>
-    {% if page.title %}
-      {{ page.title | escape }}
-    {% else %}
-      {{ site.title | escape }}
-    {% endif %}
-  </title>
+  {% if page.date %}
+    <meta content='{{ site.url }}{{ page.url }}' property='og:url' />
+    <meta content="{{ page.description | strip_html | strip_newlines | truncate: 120 }}" property='og:description' />
+    <meta content="article" property="og:type" />
+    <meta content='{{ page.title }} - {{ site.title }}' property='og:title' />
+    <title>{{ page.title }} - {{ site.title }}</title>
+  {% else %}
+    <title>{{ site.title }}</title>
+    <meta content='{{ site.title }}' property='og:title' />
+    <meta content='{{ site.url }}' property='og:url' />
+    <meta content="{{ site.description }}" property='og:description' />
+    <meta content="blog" property="og:type" />
+  {% endif %}
 
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
