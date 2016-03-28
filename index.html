@@ -1,23 +1,43 @@
 ---
-layout: default
+layout: post
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+{% unless page.title == 'blog' %}
+<div class="about">
+  <h3>about me</h3>
+  <p>Hi! Hello, I'm Rishipuri. You can call me `rishi`.</p>
+  <p>I'm a developer currently based in The UK looking for entry level roles as a Web and/or Python developer.</p>
+  <p>I have keen interests in Web Development (JavaScript and Python), Data Science and Machine Learning.</p>
+  <p>I grew up in Mumbai and graduated from University of Mumbai with a degree in IT.</p>
+  <p>I love taking minimalist photographs. I love reading. I wish to travel the whole world.</p>
 </div>
+
+<div class="latestblog">
+  <h3>latest blog post</h3>
+  <p>
+    {% for post in site.posts limit:1 %}
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+      <span>{{ post.date | date: "%b %d, %Y"}}</span>
+    {% endfor %}
+  </p>
+</div>
+<div class="projects">
+  <h3>projects</h3>
+  <ul>
+    <li><a href="">project:</a> description</li>
+    <li><a href="">project:</a> description</li>
+    <li><a href="">project:</a> description</li>
+  </ul>
+</div>
+<div class="contact">
+  <h3>contact me</h3>
+  <p>find me here, here, here and here</p>
+  <p>or mail at here@here.here</p>
+</div>
+{% endunless %}
+
+{% if page.title == 'blog' %}
+  {{ content }}
+{% endif %}

@@ -2,12 +2,6 @@
  * Syntax highlighting styles
  */
 .highlight {
-    background: #fff;
-    @extend %vertical-rhythm;
-
-    .highlighter-rouge & {
-      background: #eef;
-    }
 
     .c     { color: #998; font-style: italic } // Comment
     .err   { color: #a61717; background-color: #e3d2d2 } // Error
@@ -69,3 +63,7 @@
     .vi    { color: #008080 } // Name.Variable.Instance
     .il    { color: #099 } // Literal.Number.Integer.Long
 }
+
+.css .o,
+.css .o + .nt,
+.css .nt + .nt { color: #999; }

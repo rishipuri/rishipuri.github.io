@@ -1,3 +1,5 @@
 todos.md
-_site
-.sass-cache
+_site/
+.sass-cache/
+_drafts/
+
