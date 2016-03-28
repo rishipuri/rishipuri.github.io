@@ -6,10 +6,10 @@
   <body>
     <div class="wrap">
       <div class="header">
-        <h2><a href="/">rishipuri</a></h2>
+        <h1><a href="/">rishipuri</a></h1>
         <ul class="nav">
           <li>
-            {% if page.date or page.title == 'blog' %}
+            {% if page.title == 'blog' %}
               <a href="/">about me</a>
             {% else %}
               <a href="/blog">blog</a>
@@ -23,8 +23,8 @@
       {% if page.date %}
         <div class="post">
           <div class="title">
-            <h3>{{ page.title }}</h3>
-            <p>{{ page.date | date_to_string }}</p>
+            <h2>{{ page.title }}</h2>
+            <p class="date">{{ page.date | date_to_string }}</p>
           </div>
           <div class="body">
             {{ content }}
@@ -32,7 +32,7 @@
         </div>
       {% endif %}
       <div class="footer">
-        <p>footer</p>
+        <p>This is a footer. This is the end.</p>
       </div>
     </div>
   </body>

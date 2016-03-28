@@ -28,9 +28,29 @@ body {
 a {
   color: $link-color;
   text-decoration: none;
-
+  
   &:hover,
   &:focus {
-    text-decoration: underline;
+    color: $orange;
+    background-color: $lightblue;
   }
+}
+
+span.special {
+  border-bottom: 2px solid $lightblue;
+}
+
+span.description {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: lighten($body-color, 10);
+}
+
+span.date {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: lighten($body-color, 10);
+  text-transform: uppercase;
 }

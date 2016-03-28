@@ -3,14 +3,15 @@ layout: post
 title: blog
 ---
 <div class="blog">
-<h3>My recent posts</h3>
+<h3>My Recent Posts</h3>
 <ul>
 {% for post in site.posts %}
   <li>
     <a href="{{ post.url }}">
       {{ post.title }}
     </a>
-    <span>{{ post.date | date: "%b %d, %Y"}}</span>
+    <span class="description">{{ post.description }}</span>
+    <span class="date">{{ post.date | date: "%b %d, %Y"}}</span>
   </li>
 {% endfor %}
 </ul>
