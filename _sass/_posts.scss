@@ -9,6 +9,11 @@
   li + li {
     margin-top: .25rem;
   }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 2.5rem;
+  }
 }
 .post .title {
   color: #303030;
