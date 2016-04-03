@@ -23,7 +23,10 @@
     padding: 0px;
     font-size: 200%;
     color: $orange;
-
+    
+    img {
+      width: 37px;
+    }
   
     &:hover,
     &:focus {
