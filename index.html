@@ -19,12 +19,16 @@ layout: post
   <h3>Latest Blog Post</h3>
   <p>
     {% for post in site.posts limit:1 %}
+      {% if post.date == "" %}
+        Rishi is busy writing his first post.
+      {% endif %}
       <a href="{{ post.url }}">
         {{ post.title }}
       </a>
       <span class="description">{{ post.description }}</span>
-      <span class="date">{{ post.date | date: "%b %d, %Y"}}</span>
+      <span class="date">{{ post.date | date: "%b %d, %Y" }}</span>
     {% endfor %}
+    
   </p>
 </div>
 

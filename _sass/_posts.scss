@@ -16,7 +16,9 @@
   }
 }
 .post .title {
-  color: #303030;
+  h1 {
+    margin-bottom: 0rem;
+  }
 }
 
 .post .date {
@@ -24,5 +26,13 @@
   margin-top: -.5rem;
   margin-bottom: 1rem;
   color: #9a9a9a;
+  font-size: 85%;
 }
 
+
+.post img {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1rem;
+  border-radius: 5px;
+}

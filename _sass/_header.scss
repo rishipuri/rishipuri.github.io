@@ -5,8 +5,9 @@
 .header {
   padding-top:    1rem;
   padding-bottom: 1rem;
-  margin-bottom: 1rem;
-  display: flex;
+  margin-bottom:  1rem;
+  display:        flex;
+  font-family:    $header-font-family;
 }
 
 .header > * {
@@ -16,15 +17,17 @@
 .header h1 {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: 'Nunito', Lora, Helvetica Neue, Arial, sans-serif;
   
   a {
     color: inherit;
     padding: 0px;
+    font-size: 200%;
+    color: $orange;
 
+  
     &:hover,
     &:focus {
-      color: $orange;
+      color: darken($orange, 10);
       background: none;
     }
   }
@@ -33,7 +36,10 @@
 .nav {
   padding: 10px;
   text-align: right;
-
+  
+  li {
+    margin-top: 25px;
+  }
   a {
     padding: 5px 10px;
   }

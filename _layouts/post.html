@@ -6,7 +6,7 @@
   <body>
     <div class="wrap">
       <div class="header">
-        <h1><a href="/">rishipuri</a></h1>
+        <h1><a href="/">️⚇</a></h1>
         <ul class="nav">
           <li>
             {% if page.title == 'blog' %}
@@ -23,8 +23,9 @@
       {% if page.date %}
         <div class="post">
           <div class="title">
-            <h2>{{ page.title }}</h2>
-            <p class="date">{{ page.date | date_to_string }}</p>
+            <h1>{{ page.title }}</h1>
+            <p>{{ page.description }}</p>
+            <p class="date">{{ page.date | date: "%B %d, %Y" }}</p>
           </div>
           <div class="body">
             {{ content }}
