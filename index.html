@@ -18,16 +18,21 @@ layout: post
 <div class="latestblog">
   <h3>Latest Blog Post</h3>
   <p>
-    {% for post in site.posts limit:1 %}
-      {% if post.date == "" %}
-        Rishi is busy writing his first post.
-      {% endif %}
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-      <span class="description">{{ post.description }}</span>
-      <span class="date">{{ post.date | date: "%b %d, %Y" }}</span>
-    {% endfor %}
+    {% if site.posts.first == null %}
+      Rishi is busy writing something awesome. Meanwhile, go chat with him on <a href="https://twitter.com/rishipuri_" target="_blank">twitter</a>.
+    {% else %}
+      {% for post in site.posts limit:1 %}
+        <a href="{{ post.url }}">
+          {{ post.title }}
+        </a>
+        <span class="description">
+          {{ post.description }}
+        </span>
+        <span class="date">
+          {{ post.date | date: "%b %d, %Y" }}
+        </span>
+      {% endfor %}
+    {% endif %}
     
   </p>
 </div>
