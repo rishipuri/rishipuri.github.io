@@ -6,7 +6,7 @@ description:  This is where rishipuri lives on the Interwebs. He is a web develo
 url:          http://rishipuri.co.uk/
 baseurl:      ""
 
-permalink:    pretty
+permalink:    /blog/:year/:month/:day/:title/
 
 
 # Build settings
