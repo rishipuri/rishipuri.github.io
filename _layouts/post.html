@@ -23,19 +23,22 @@
       {% if page.date %}
         <div class="post">
           <div class="title">
+            <p class="date">{{ page.date | date: "%B %d, %Y" }}</p>
             <h1>{{ page.title }}</h1>
             <p>{{ page.description }}</p>
-            <p class="date">{{ page.date | date: "%B %d, %Y" }}</p>
+            
           </div>
           <div class="body">
             {{ content }}
           </div>
+          <br />
+          <p class="date">{{ page.date | date: "%B %d, %Y" }}</p>
         </div>
 
         {% include scroll.html %}
       {% endif %}
       <div class="footer">
-        <p>This is a footer. This is the end.</p>
+        <p>Drinking code. Writing coffee.</p>
       </div>
     </div>
   </body>
