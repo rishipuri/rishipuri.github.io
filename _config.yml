@@ -3,7 +3,7 @@
 title:        rishipuri
 description:  This is where rishipuri lives on the Interwebs. He is a web developer currently based in UK
 
-url:          http://rishipuri.co.uk/
+url:          https://rishipuri.co.uk/
 baseurl:      ""
 
 permalink:    /blog/:year/:month/:day/:title/
