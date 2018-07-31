@@ -4,43 +4,7 @@
     {% include head.html %}
   </head>
   <body>
-    <div class="wrap">
-      <div class="header">
-        <h1><a href="/"><img src="/assets/images/logo.png" alt=""></a></h1>
-        <ul class="nav">
-          <li>
-            {% if page.title == 'blog' %}
-              <a href="/">about me</a>
-            {% else %}
-              <a href="/blog">blog</a>
-            {% endif %}
-          </li>
-        </ul>
-      </div>
-      {% unless page.date %}
-        {{ content }}
-      {% endunless %}
-      {% if page.date %}
-        <div class="post">
-          <div class="title">
-            <p class="date">{{ page.date | date: "%B %d, %Y" }}</p>
-            <h1>{{ page.title }}</h1>
-            <p>{{ page.description }}</p>
-
-          </div>
-          <div class="body">
-            {{ content }}
-          </div>
-          <br />
-          <p class="date">{{ page.date | date: "%B %d, %Y" }}</p>
-        </div>
-
-        {% include scroll.html %}
-      {% endif %}
-      <div class="footer">
-        <p>Drinking code. Writing coffee.</p>
-      </div>
-    </div>
+    Nothing to see here.
   </body>
 
   {% include ga.html %}
